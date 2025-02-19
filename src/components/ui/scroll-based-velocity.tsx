@@ -86,7 +86,7 @@ function ParallaxText({
   return (
     <div
       ref={containerRef}
-      className="w-full h-[12rem] align-center overflow-hidden whitespace-nowrap"
+      className="w-full h-[12rem] align-center whitespace-nowrap"
       {...props}
     >
       <motion.div className="inline-block mt-[1.5rem]" style={{ x }}>

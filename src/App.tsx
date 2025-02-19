@@ -1,7 +1,9 @@
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
+import Hackathons from "./components/Hackathons";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Warfare from "./components/Warfare";
 
@@ -12,9 +14,11 @@ function App() {
         <Navbar />
       </div>
       <Landing />
-      <Skills />
-      <Warfare />
+      <Projects />
       <Experience />
+      <Hackathons />
+      {/* <Skills /> */}
+      {/* <Warfare /> */}
       <Footer />
     </div>
   );
