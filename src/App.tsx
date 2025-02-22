@@ -6,15 +6,17 @@ import Navbar from "./components/header/Navbar";
 import Projects from "./components/projects/Projects";
 import Skills from "./components/Skills";
 import Warfare from "./components/Warfare";
+import BentoProjectGrid from "./components/projects/BentoProjectGrid";
 
 function App() {
   return (
     <div className="w-full flex flex-col items-center ">
-      <div className="fixed top-[7rem]">
+      <div className="fixed top-[4rem]">
         <Navbar />
       </div>
       <Landing />
-      <Projects />
+      {/* <Projects /> */}
+      <BentoProjectGrid />
       <Experience />
       <Hackathons />
       {/* <Skills /> */}
