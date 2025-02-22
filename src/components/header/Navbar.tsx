@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { gsap } from "gsap";
-import lettuceicon from "../assets/lettuce-icon.svg";
+import lettuceicon from "../../assets/lettuce-icon.svg";
 import {
   CalendarIcon,
   FileTextIcon,
@@ -9,37 +9,37 @@ import {
   InputIcon,
 } from "@radix-ui/react-icons";
 
-import { BentoCard, BentoGrid } from "./ui/bento-grid";
+import { BentoCard, BentoGrid } from "../ui/bento-grid";
 
 const features = [
   {
     Icon: FileTextIcon,
-    name: "Save your files",
-    href: "/",
+    name: "experience",
+    href: "#experience",
     cta: "Learn more",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
     className: "lg:row-start-2 md:row-end-4 md:col-start-2 md:col-end-4 bg-white text-black",
   },
   {
     Icon: InputIcon,
-    name: "Full text search",
-    href: "/",
+    name: "hackathons",
+    href: "#hackathons",
     cta: "Learn more",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
     className: "md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-2 bg-[#D0FFB3] border-4xl",
   },
   {
     Icon: GlobeIcon,
-    name: "Multilingual",
-    href: "/",
+    name: "footer",
+    href: "#footer",
     cta: "Learn more",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
     className: "md:col-start-1 md:col-end-2 md:row-start-2 md:row-end-4 bg-[#D0FFB3] border-4xl",
   },
   {
     Icon: CalendarIcon,
-    name: "Calendar",
-    href: "/",
+    name: "projects",
+    href: "#projects",
     cta: "Learn more",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
     className: "md:col-start-3 md:col-end-3 md:row-start-1 md:row-end-2 bg-[#D0FFB3] border-4xl",
