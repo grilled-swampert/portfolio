@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Lens } from "../ui/lens";
 
 const projects = [
   {
@@ -108,11 +109,18 @@ const BentoProjectGrid = () => {
                 key={index}
                 className="w-[100vw] flex flex-col justify-center items-center text-center text-white"
               >
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className=" h-[400px] rounded-xl shadow-lg mb-4"
-                />
+                <Lens
+                  zoomFactor={2}
+                  lensSize={150}
+                  isStatic={false}
+                  ariaLabel="Zoom Area"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className=" h-[400px] rounded-xl shadow-lg mb-4"
+                  />
+                </Lens>
                 <h2 className="text-4xl font-bold">{project.name}</h2>
                 <p className="text-lg text-gray-300">{project.stack}</p>
                 <p className="mt-2 w-3/4">{project.description}</p>

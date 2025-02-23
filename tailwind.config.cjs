@@ -11,6 +11,7 @@ module.exports = {
         poppins: ['poppins-regular', ...fontFamily.sans],
         poppinsBold: ['poppins-bold', ...fontFamily.sans],
         quattrocento: ['quattrocento-regular', ...fontFamily.serif],
+        tenon: ['tenon', 'sans-serif'],
       },
     },
   },
