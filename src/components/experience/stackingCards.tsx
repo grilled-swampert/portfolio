@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
-const Card = ({ title, content, image, index }) => {
+const Card = ({ title, content, image, index, className }) => {
   return (
-    <li className="card sticky top-0" style={{ "--index": index }}>
-      <div className="shadow-lg bg-gray-100 text-gray-900 rounded-2xl overflow-hidden grid grid-cols-2 p-6 transform transition-transform duration-500">
+    <li className="card sticky top-0 h-[70vh]" style={{ "--index": index }}>
+      <div className="shadow-lg h-full text-gray-900 rounded-2xl overflow-hidden grid grid-cols-2 p-6 transform transition-transform duration-500" style={className}>
         <div className="space-y-4 text-left">
           <h2 className="text-4xl font-serif font-bold">{title}</h2>
           <p className="text-lg">{content}</p>
@@ -41,38 +41,29 @@ const StackingCards = () => {
       title: "Card One",
       content:
         "This is the content of card one. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: "https://assets.codepen.io/210284/flower-9.jpg",
     },
     {
       title: "Card Two",
       content:
         "This is the content of card two. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: "https://assets.codepen.io/210284/flower-8.jpg",
     },
     {
       title: "Card Three",
       content:
         "This is the content of card three. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: "https://assets.codepen.io/210284/flower-7.jpg",
-    },
-    {
-      title: "Card Four",
-      content:
-        "This is the content of card four. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: "https://assets.codepen.io/210284/flower-6.jpg",
     },
   ];
 
   return (
     <div className="text-beige text-center pb-40">
       <p
-        className="text-6xl font-bold text-black"
+        className="text-6xl font-bold text-black mb-7 pt-[10rem] flex justify-center"
         style={{ fontFamily: "afacad-bold" }}
       >
         EXPERIENCE
       </p>
       <main className="w-4/5 mx-auto">
-        <ul id="cards" className="grid grid-cols-1 gap-10 pb-20 mb-10">
+        <ul id="cards" className="grid grid-cols-1 gap-10 pb-20 mb-10 mt-10">
           {cards.map((card, index) => (
             <Card key={index} index={index + 1} {...card} />
           ))}
