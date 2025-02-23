@@ -7,17 +7,19 @@ import Projects from "./components/projects/Projects";
 import Skills from "./components/Skills";
 import Warfare from "./components/Warfare";
 import BentoProjectGrid from "./components/projects/BentoProjectGrid";
+import StackingCards from "./components/experience/stackingCards";
 
 function App() {
   return (
     <div className="w-full flex flex-col items-center ">
-      <div className="fixed top-[4rem]">
+      {/* <div className="fixed top-[4rem]">
         <Navbar />
-      </div>
+      </div> */}
       <Landing />
       {/* <Projects /> */}
       <BentoProjectGrid />
-      <Experience />
+      {/* <Experience /> */}
+      <StackingCards />
       <Hackathons />
       {/* <Skills /> */}
       {/* <Warfare /> */}
