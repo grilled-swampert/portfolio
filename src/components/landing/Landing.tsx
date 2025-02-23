@@ -1,10 +1,20 @@
-import { ShimmerButton } from "../ui/shimmer-button";
 import { LineShadowText } from "../ui/line-shadow-text";
+import { InteractiveGridPattern } from "../magicui/interactive-grid-pattern";
 
 const Landing = () => {
+  function cn(...classes: string[]): string {
+    return classes.filter(Boolean).join(' ');
+  }
+
   return (
     <div className="relative w-full h-screen flex flex-col items-center justify-center">
       {/* Version Info */}
+      <InteractiveGridPattern
+        className={cn(
+          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[150%] skew-y-12",
+        )}
+      />
       <div
         className="absolute top-0 left-0 m-4"
         style={{ fontFamily: "afacad-regular" }}

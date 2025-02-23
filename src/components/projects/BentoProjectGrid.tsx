@@ -1,72 +1,107 @@
 import React, { useEffect } from "react";
 import { Lens } from "../ui/lens";
+import { FontFamilyIcon } from "@radix-ui/react-icons";
+import { MagicCard } from "../magicui/magic-card";
 
 const projects = [
   {
-    name: "Grocery App",
+    name: "GNSS Map Matching and Road Identification",
+    stack: "Python, OSMR, React, GIS",
+    description: "A tool that processes GNSS data to accurately match and identify road networks for improved navigation.",
+    deployedLink: "",
+    githubLink: "",
+    image: "images/coming-soon.png",
+    status: "",
+  },
+  {
+    name: "Financial Investment Report Generator",
+    stack: "Python, OpenAI API, Flask, React",
+    description: "A web application that leverages AI to generate detailed financial investment reports and actionable insights.",
+    deployedLink: "",
+    githubLink: "",
+    image: "images/coming-soon.png",
+    status: "",
+  },
+  {
+    name: "Social Media Advisor",
+    stack: "Python, OpenAI API, Flask, React",
+    description: "A mobile app that offers personalized social media strategy tips and content optimization advice.",
+    deployedLink: "",
+    githubLink: "",
+    image: "images/coming-soon.png",
+    status: "",
+  },
+  {
+    name: "NLP Extractor",
+    stack: "Python, SpaCy, Flask",
+    description: "An application that uses natural language processing to extract key information and insights from text data.",
+    deployedLink: "",
+    githubLink: "",
+    image: "images/coming-soon.png",
+    status: "",
+  },
+  {
+    name: "OE Allotment Application",
     stack: "React, Node.js, MongoDB",
-    description: "A simple grocery delivery app with real-time tracking.",
+    description: "A web solution designed to manage and automate the allotment of office equipment and resources.",
+    deployedLink: "",
+    githubLink: "",
     image: "images/coming-soon.png",
+    status: "",
   },
   {
-    name: "AI Robot Assistant",
-    stack: "Python, OpenAI API, Flask",
-    description: "An AI-powered chatbot and assistant for automation.",
+    name: "H&M Alloment Application",
+    stack: "React, Node.js, MongoDB",
+    description: "An application tailored to streamline the resource allotment process for H&M, enhancing operational efficiency.",
+    deployedLink: "",
+    githubLink: "",
     image: "images/coming-soon.png",
+    status: "",
   },
   {
-    name: "Plant Care",
-    stack: "Flutter, Firebase",
-    description: "An app that helps users track plant care schedules.",
+    name: "Blockchain Setup",
+    stack: "Golang, React",
+    description: "A project focused on configuring and deploying a blockchain network to facilitate secure, transparent transactions.",
+    deployedLink: "",
+    githubLink: "",
     image: "images/coming-soon.png",
+    status: "",
   },
   {
-    name: "Cat Muffs 1",
-    stack: "Next.js, Tailwind CSS",
-    description: "A cozy ecommerce store for cat accessories.",
+    name: "Chat Application",
+    stack: "React, Socket.io, Golang",
+    description: "A real-time messaging platform enabling instant chat and group conversations with robust scalability.",
+    deployedLink: "",
+    githubLink: "",
     image: "images/coming-soon.png",
+    status: "",
   },
   {
-    name: "Cat Muffs 2",
-    stack: "Next.js, Tailwind CSS",
-    description: "A cozy ecommerce store for cat accessories.",
+    name: "Tableau StoryBoard",
+    stack: "Tableau, Python, Flask",
+    description: "An interactive dashboard application that combines powerful Tableau visualizations with dynamic storytelling.",
+    deployedLink: "",
+    githubLink: "",
     image: "images/coming-soon.png",
+    status: "",
   },
   {
-    name: "Cat Muffs 3",
-    stack: "Next.js, Tailwind CSS",
-    description: "A cozy ecommerce store for cat accessories.",
+    name: "Memory Game",
+    stack: "JavaScript, HTML, CSS",
+    description: "A fun, interactive browser game that challenges users to match pairs of cards to boost memory and concentration.",
+    deployedLink: "",
+    githubLink: "",
     image: "images/coming-soon.png",
+    status: "",
   },
   {
-    name: "Cat Muffs 4",
-    stack: "Next.js, Tailwind CSS",
-    description: "A cozy ecommerce store for cat accessories.",
+    name: "Weather Application using API",
+    stack: "React, OpenWeatherMap API, CSS",
+    description: "A dynamic weather forecasting app that retrieves real-time data from public APIs and displays it in an intuitive interface.",
+    deployedLink: "",
+    githubLink: "",
     image: "images/coming-soon.png",
-  },
-  {
-    name: "Cat Muffs 5",
-    stack: "Next.js, Tailwind CSS",
-    description: "A cozy ecommerce store for cat accessories.",
-    image: "images/coming-soon.png",
-  },
-  {
-    name: "Cat Muffs 6",
-    stack: "Next.js, Tailwind CSS",
-    description: "A cozy ecommerce store for cat accessories.",
-    image: "images/coming-soon.png",
-  },
-  {
-    name: "Cat Muffs 7",
-    stack: "Next.js, Tailwind CSS",
-    description: "A cozy ecommerce store for cat accessories.",
-    image: "images/coming-soon.png",
-  },
-  {
-    name: "Cat Muffs 8",
-    stack: "Next.js, Tailwind CSS",
-    description: "A cozy ecommerce store for cat accessories.",
-    image: "images/coming-soon.png",
+    status: "",
   },
 ];
 
@@ -107,7 +142,7 @@ const BentoProjectGrid = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="w-[100vw] flex flex-col justify-center items-center text-center text-white"
+                className="w-[100vw] flex flex-row justify-center items-center text-center text-white"
               >
                 <Lens
                   zoomFactor={2}
@@ -121,9 +156,31 @@ const BentoProjectGrid = () => {
                     className=" h-[400px] rounded-xl shadow-lg mb-4"
                   />
                 </Lens>
-                <h2 className="text-4xl font-bold">{project.name}</h2>
-                <p className="text-lg text-gray-300">{project.stack}</p>
-                <p className="mt-2 w-3/4">{project.description}</p>
+                <div className="w-[30vw] ml-5 flex justify-center flex-col items-center">
+                  <h2
+                    className="text-4xl font-bold"
+                    style={{ fontFamily: "quattrocento-regular" }}
+                  >
+                    {project.name}
+                  </h2>
+                  <div className="flex flex-wrap gap-2 mt-2 justify-center items-center">
+                    {project.stack.split(", ").map((tech, idx) => (
+                      <div
+                        key={idx}
+                        className="text-md text-gray-300"
+                        style={{ fontFamily: "quattrocento-regular" }}
+                      >
+                        <MagicCard
+                          className="cursor-pointer flex-col items-center justify-center whitespace-nowrap p-3"
+                          gradientColor={"#D9D9D955"}
+                        >
+                          {tech}
+                        </MagicCard>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-2 w-3/4 " style={{ fontFamily: "afacad-regular"}}>{project.description}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -131,13 +188,20 @@ const BentoProjectGrid = () => {
       </div>
 
       <section className="h-full">
-        <div className="container p-20 text-center">
-          <h1 className="text-6xl font-light mb-4">Is this working?</h1>
-          <p className="w-1/2 mx-auto my-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt
-            nihil beatae qui dicta necessitatibus officia repudiandae mollitia
-            aliquam! Molestias aliquam quos est nam, perferendis ullam iusto
-            earum aut voluptates.
+        <div className="container p-20 text-center text-white">
+          <h1
+            className="text-6xl font-light mb-4"
+            style={{ fontFamily: "afacad-bold" }}
+          >
+            More in Development.
+          </h1>
+          <p
+            className="w-1/2 mx-auto my-8"
+            style={{ fontFamily: "poppins-regular" }}
+          >
+            We build our own prisons. Bars forged of oaths, codes, commitments.
+            Walls of self-doubt and accepted limitation. We inhabit these cells,
+            these identities, and call them "us."
           </p>
         </div>
       </section>
