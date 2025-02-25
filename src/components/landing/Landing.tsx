@@ -1,9 +1,14 @@
 import { LineShadowText } from "../ui/line-shadow-text";
-import { InteractiveGridPattern } from "../magicui/interactive-grid-pattern";
+import { InteractiveGridPattern } from "../ui/interactive-grid-pattern";
+import {
+  AnimatedSpan,
+  Terminal,
+  TypingAnimation,
+} from "../ui/terminal";
 
 const Landing = () => {
   function cn(...classes: string[]): string {
-    return classes.filter(Boolean).join(' ');
+    return classes.filter(Boolean).join(" ");
   }
 
   return (
@@ -12,14 +17,37 @@ const Landing = () => {
       <InteractiveGridPattern
         className={cn(
           "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[150%] skew-y-12",
+          "inset-x-0 inset-y-[-30%] h-[150%] skew-y-12"
         )}
       />
       <div
-        className="absolute top-0 left-0 m-4"
+        className="absolute top-0 left-0 m-4 "
         style={{ fontFamily: "afacad-regular" }}
       >
-        Version 1.1
+        <p className="ml-2">Version 1.1</p>
+        <Terminal className="hidden md:block">
+          <TypingAnimation className="text-white">&gt; version 1.2 patches</TypingAnimation>
+
+          <AnimatedSpan delay={1500} className="text-white">
+            <span>✘ Github & Deployment Links.</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan delay={2000} className="text-white">
+            <span>✘ Hackathon Section.</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan delay={3000} className="text-white">
+            <span>✘ Fixing bugs in transition animations.</span>
+          </AnimatedSpan>
+
+          <TypingAnimation delay={6500} className="text-amber-200">
+            Project patches note updated.
+          </TypingAnimation>
+
+          <TypingAnimation delay={7000} className="text-white">
+            Will be added soon.
+          </TypingAnimation>
+        </Terminal>
       </div>
 
       {/* Main Header */}
@@ -36,8 +64,8 @@ const Landing = () => {
       {/* Who Am I Section */}
       <div className="mt-8 text-center max-w-xl px-4">
         <p className="text-lg">
-          I'm a digital alchemist turning coffee into code and dreams into
-          reality. I thrive on creative chaos and unconventional solutions.
+          I'm a digital alchemist turning coffee into energy and music into
+          coping mechanism. I thrive on creative chaos and unconventional solutions.
         </p>
         <button
           className="bg-black font-bold p-0 rounded-[5px] mt-5"
@@ -50,7 +78,7 @@ const Landing = () => {
       </div>
 
       <div
-        className="absolute text-2xl right-8 top-1/2 transform -translate-y-1/2 space-y-4"
+        className="absolute text-2xl text-center mt-3 md:right-8 top-2/3 md:top-1/2 transform md:-translate-y-1/2 space-y-4 "
         style={{ fontFamily: "poppins-bold" }}
       >
         <div className="flex flex-col">

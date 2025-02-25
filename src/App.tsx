@@ -234,7 +234,7 @@ function App() {
           <Landing />
           <BentoProjectGrid />
           <StackingCards />
-          <Hackathons />
+          {/* <Hackathons /> */}
           <Footer />
         </div>
       )}

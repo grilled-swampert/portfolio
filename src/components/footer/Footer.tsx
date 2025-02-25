@@ -15,13 +15,13 @@ const Footer = () => {
         </VelocityScroll>
       </div>
       <div
-        className="w-full flex flex-col gap-8 overflow-hidden text-3xl text-white"
+        className="w-full flex flex-col gap-8 overflow-hidden text-center md:text-left text-3xl text-white"
         style={{ fontFamily: "quattrocento-regular" }}
       >
-        <div className="mx-40">LINKEDLN</div>
-        <div className="mx-40">GITHUB</div>
-        <div className="mx-40">RESUME</div>
-        <div className="mx-40">COVER LETTER</div>
+        <div className="md:mx-40">LINKEDLN</div>
+        <div className="md:mx-40">GITHUB</div>
+        <div className="md:mx-40">RESUME</div>
+        <div className="md:mx-40">COVER LETTER</div>
       </div>
     </div>
   );

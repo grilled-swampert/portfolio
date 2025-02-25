@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { Lens } from "../ui/lens";
 import { FontFamilyIcon } from "@radix-ui/react-icons";
-import { MagicCard } from "../magicui/magic-card";
+import { MagicCard } from "../ui/magic-card";
 
 const projects = [
   {
     name: "GNSS Map Matching and Road Identification",
     stack: "Python, OSMR, React, GIS",
-    description: "A tool that processes GNSS data to accurately match and identify road networks for improved navigation.",
+    description:
+      "A tool that processes GNSS data to accurately match and identify road networks for improved navigation.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -16,7 +17,8 @@ const projects = [
   {
     name: "Financial Investment Report Generator",
     stack: "Python, OpenAI API, Flask, React",
-    description: "A web application that leverages AI to generate detailed financial investment reports and actionable insights.",
+    description:
+      "A web application that leverages AI to generate detailed financial investment reports and actionable insights.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -25,7 +27,8 @@ const projects = [
   {
     name: "Social Media Advisor",
     stack: "Python, OpenAI API, Flask, React",
-    description: "A mobile app that offers personalized social media strategy tips and content optimization advice.",
+    description:
+      "A mobile app that offers personalized social media strategy tips and content optimization advice.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -34,7 +37,8 @@ const projects = [
   {
     name: "NLP Extractor",
     stack: "Python, SpaCy, Flask",
-    description: "An application that uses natural language processing to extract key information and insights from text data.",
+    description:
+      "An application that uses natural language processing to extract key information and insights from text data.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -43,7 +47,8 @@ const projects = [
   {
     name: "OE Allotment Application",
     stack: "React, Node.js, MongoDB",
-    description: "A web solution designed to manage and automate the allotment of office equipment and resources.",
+    description:
+      "A web solution designed to manage and automate the allotment of office equipment and resources.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -52,7 +57,8 @@ const projects = [
   {
     name: "H&M Alloment Application",
     stack: "React, Node.js, MongoDB",
-    description: "An application tailored to streamline the resource allotment process for H&M, enhancing operational efficiency.",
+    description:
+      "An application tailored to streamline the resource allotment process for H&M, enhancing operational efficiency.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -61,7 +67,8 @@ const projects = [
   {
     name: "Blockchain Setup",
     stack: "Golang, React",
-    description: "A project focused on configuring and deploying a blockchain network to facilitate secure, transparent transactions.",
+    description:
+      "A project focused on configuring and deploying a blockchain network to facilitate secure, transparent transactions.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -70,7 +77,8 @@ const projects = [
   {
     name: "Chat Application",
     stack: "React, Socket.io, Golang",
-    description: "A real-time messaging platform enabling instant chat and group conversations with robust scalability.",
+    description:
+      "A real-time messaging platform enabling instant chat and group conversations with robust scalability.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -79,7 +87,8 @@ const projects = [
   {
     name: "Tableau StoryBoard",
     stack: "Tableau, Python, Flask",
-    description: "An interactive dashboard application that combines powerful Tableau visualizations with dynamic storytelling.",
+    description:
+      "An interactive dashboard application that combines powerful Tableau visualizations with dynamic storytelling.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -88,7 +97,8 @@ const projects = [
   {
     name: "Memory Game",
     stack: "JavaScript, HTML, CSS",
-    description: "A fun, interactive browser game that challenges users to match pairs of cards to boost memory and concentration.",
+    description:
+      "A fun, interactive browser game that challenges users to match pairs of cards to boost memory and concentration.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -97,7 +107,8 @@ const projects = [
   {
     name: "Weather Application using API",
     stack: "React, OpenWeatherMap API, CSS",
-    description: "A dynamic weather forecasting app that retrieves real-time data from public APIs and displays it in an intuitive interface.",
+    description:
+      "A dynamic weather forecasting app that retrieves real-time data from public APIs and displays it in an intuitive interface.",
     deployedLink: "",
     githubLink: "",
     image: "images/coming-soon.png",
@@ -142,7 +153,7 @@ const BentoProjectGrid = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="w-[100vw] flex flex-row justify-center items-center text-center text-white"
+                className="w-[100vw] flex flex-col md:flex-row justify-center items-center text-center text-white"
               >
                 <Lens
                   zoomFactor={2}
@@ -153,7 +164,7 @@ const BentoProjectGrid = () => {
                   <img
                     src={project.image}
                     alt={project.name}
-                    className=" h-[400px] rounded-xl shadow-lg mb-4"
+                    className="p-10 md:h-[400px] rounded-xl shadow-lg mb-4"
                   />
                 </Lens>
                 <div className="w-[30vw] ml-5 flex justify-center flex-col items-center">
@@ -163,7 +174,7 @@ const BentoProjectGrid = () => {
                   >
                     {project.name}
                   </h2>
-                  <div className="flex flex-wrap gap-2 mt-2 justify-center items-center">
+                  <div className="flex md:flex-wrap gap-2 mt-2 justify-center items-center">
                     {project.stack.split(", ").map((tech, idx) => (
                       <div
                         key={idx}
@@ -179,7 +190,13 @@ const BentoProjectGrid = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-2 w-3/4 " style={{ fontFamily: "afacad-regular"}}>{project.description}</div>
+                  <div
+                    className=" mt-2 md:w-3/4 "
+                    style={{ fontFamily: "afacad-regular" }}
+                  >
+                    {project.description}
+                  </div>
+                  
                 </div>
               </div>
             ))}
@@ -190,13 +207,13 @@ const BentoProjectGrid = () => {
       <section className="h-full">
         <div className="container p-20 text-center text-white">
           <h1
-            className="text-6xl font-light mb-4"
+            className="text-4xl md:text-6xl font-light mb-4"
             style={{ fontFamily: "afacad-bold" }}
           >
             More in Development.
           </h1>
           <p
-            className="w-1/2 mx-auto my-8"
+            className="md:text-1xl w-1/2 mx-auto my-8"
             style={{ fontFamily: "poppins-regular" }}
           >
             We build our own prisons. Bars forged of oaths, codes, commitments.
