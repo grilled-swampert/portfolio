@@ -10,7 +10,7 @@ function App() {
   const enterButtonRef = useRef(null);
   const enterBackgroundRef = useRef(null);
   const circlesRef = useRef(null);
-  const circleTextRefs = useRef([]);
+  const circleTextRefs = useRef<Array<SVGTextPathElement | null>>([]);
 
   // This function runs when the user clicks anywhere on the page.
   // You might want to restrict this to only the button click if that fits your design.
@@ -133,16 +133,20 @@ function App() {
     };
 
     if (enterButtonRef.current) {
+      // @ts-expect-error: Property 'addEventListener' does exist on window
       enterButtonRef.current.addEventListener("mouseenter", enterMouseHover);
+      // @ts-expect-error: Property 'addEventListener' does exist on window
       enterButtonRef.current.addEventListener("mouseleave", enterMouseLeave);
     }
 
     return () => {
       if (enterButtonRef.current) {
+        // @ts-expect-error: Property 'addEventListener' does exist on window
         enterButtonRef.current.removeEventListener(
           "mouseenter",
           enterMouseHover
         );
+        // @ts-expect-error: Property 'addEventListener' does exist on window
         enterButtonRef.current.removeEventListener(
           "mouseleave",
           enterMouseLeave
@@ -181,11 +185,9 @@ function App() {
                 d="M567.5,700.5A133,133 0 1 1833.5,700.5A133,133 0 1 1567.5,700.5"
               />
             </defs>
-            <text
-              className="uppercase origin-[700px_700px] will-change-transform opacity-100 text-[28vmin]"
-            >
+            <text className="uppercase origin-[700px_700px] will-change-transform opacity-100 text-[28vmin]">
               <textPath
-                ref={(el) => (circleTextRefs.current[0] = el)}
+                ref={(el) => {circleTextRefs.current[0] = el}}
                 xlinkHref="#circle-1"
               >
                 MARTYRDOM WEATHER &nbsp;
@@ -193,7 +195,7 @@ function App() {
             </text>
             <text className="uppercase origin-[700px_700px] text-[17vmin]">
               <textPath
-                ref={(el) => (circleTextRefs.current[1] = el)}
+                ref={(el) => {circleTextRefs.current[1] = el}}
                 xlinkHref="#circle-2"
               >
                 WEAPONSIZE THE TIMELINE &nbsp;
@@ -201,7 +203,7 @@ function App() {
             </text>
             <text className="uppercase origin-[700px_700px] text-[8.3vmin]">
               <textPath
-                ref={(el) => (circleTextRefs.current[2] = el)}
+                ref={(el) => {circleTextRefs.current[2] = el}}
                 xlinkHref="#circle-3"
               >
                 BLURRING THROUGH THESE MOTIONS &nbsp;
@@ -209,7 +211,9 @@ function App() {
             </text>
             <text className="uppercase origin-[700px_700px] text-[11vmin]">
               <textPath
-                ref={(el) => (circleTextRefs.current[3] = el)}
+                ref={(el) => {
+                  circleTextRefs.current[3] = el;
+                }}
                 xlinkHref="#circle-4"
               >
                 I LOST ALL FOCUS &nbsp;

@@ -118,7 +118,7 @@ const projects = [
 const BentoProjectGrid = () => {
   useEffect(() => {
     const stickySections = [...document.querySelectorAll(".sticky")];
-
+    // @ts-expect-error: Parameter 'section' implicitly has an 'any' type.
     const transform = (section) => {
       const offsetTop = section.parentElement.offsetTop;
       const scrollSection = section.querySelector(".scroll_section");
