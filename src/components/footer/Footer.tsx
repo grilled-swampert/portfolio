@@ -1,6 +1,6 @@
 import { VelocityScroll } from "../ui/scroll-based-velocity";
-
 import { ReactNode } from "react";
+import '@lottiefiles/lottie-player';
 
 const HoverUnderline = ({ children, className = "", ...rest }: { children: ReactNode, className?: string }) => (
   <div className={`relative inline-block group ${className}`} {...rest}>
@@ -15,6 +15,9 @@ const Footer = () => {
       className="bg-black w-full h-[100vh] flex flex-col items-center justify-center"
       id="footer"
     >
+      <div className="w-full h-[50px] flex items-center justify-center">
+
+      </div>
       <div className="h-[400px] w-full flex items-center justify-center overflow-hidden">
         <VelocityScroll
           className="text-white text-[12rem] top-[0rem] z-0"

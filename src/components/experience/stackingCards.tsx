@@ -19,23 +19,23 @@ const Card = ({
 }) => {
   return (
     <li
-      className="card sticky top-0 h-[50vh] shadow-2xl"
+      className="card sticky top-0 md:h-[50vh] shadow-2xl"
       style={{ "--index": `${index}` } as React.CSSProperties}
     >
       <div
         className="shadow-lg drop-shadow-xl h-full text-gray-900 rounded-2xl overflow-hidden grid grid-cols-2 p-6 transform transition-transform duration-500"
         style={{ backgroundColor: bgColor, fontFamily: "poppins-regular" }}
       >
-        <div className="width-full flex flex-row col-span-2 justify-between align-middle">
+        <div className="width-full text-left flex flex-col col-span-2 md:flex-row md:col-span-2 md:justify-between align-middle">
           <h2
-            className="text-4xl font-bold"
+            className="md:text-4xl font-bold"
             style={{ fontFamily: "poppins-bold" }}
           >
             {title}
           </h2>
           <h2
-            className="text-2xl text-right"
-            style={{ fontFamily: "poppins-bold" }}
+            className="md:text-2xl font-semibold md:text-right"
+            style={{ fontFamily: "poppins-regular" }}
           >
             {time}
           </h2>
@@ -46,7 +46,7 @@ const Card = ({
         >
           {place}
         </div>
-        <div className="col-span-1 text-left font-medium" style={{ fontFamily: "afacad-regular"}}>
+        <div className="col-span-2 md:col-span-1 text-left font-medium" style={{ fontFamily: "afacad-regular"}}>
           {content.split(". ").map((sentence, i) => (
             <p key={i} className="mt-2">
               → {sentence}
@@ -56,7 +56,7 @@ const Card = ({
 
         <figure>
           <img
-            className="w-full object-cover rounded-md"
+            className="hidden md:block w-full object-cover rounded-md"
             src={image}
             alt={title}
           />

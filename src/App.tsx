@@ -18,6 +18,14 @@ function App() {
     enterHoleAnimation();
   };
 
+  useEffect(() => {
+    // If the device width is less than 768px (Tailwind's md breakpoint),
+    // immediately set isLoaded to true to skip the animation.
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      setIsLoaded(true);
+    }
+  }, []);
+
   // The "hole" animation timeline
   const enterHoleAnimation = () => {
     // Create a timeline that will animate the various elements.
@@ -187,7 +195,9 @@ function App() {
             </defs>
             <text className="uppercase origin-[700px_700px] will-change-transform opacity-100 text-[28vmin]">
               <textPath
-                ref={(el) => {circleTextRefs.current[0] = el}}
+                ref={(el) => {
+                  circleTextRefs.current[0] = el;
+                }}
                 xlinkHref="#circle-1"
               >
                 MARTYRDOM WEATHER &nbsp;
@@ -195,7 +205,9 @@ function App() {
             </text>
             <text className="uppercase origin-[700px_700px] text-[17vmin]">
               <textPath
-                ref={(el) => {circleTextRefs.current[1] = el}}
+                ref={(el) => {
+                  circleTextRefs.current[1] = el;
+                }}
                 xlinkHref="#circle-2"
               >
                 WEAPONSIZE THE TIMELINE &nbsp;
@@ -203,7 +215,9 @@ function App() {
             </text>
             <text className="uppercase origin-[700px_700px] text-[8.3vmin]">
               <textPath
-                ref={(el) => {circleTextRefs.current[2] = el}}
+                ref={(el) => {
+                  circleTextRefs.current[2] = el;
+                }}
                 xlinkHref="#circle-3"
               >
                 BLURRING THROUGH THESE MOTIONS &nbsp;
