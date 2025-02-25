@@ -8,7 +8,10 @@ const Landing = () => {
   }
 
   return (
-    <div className="relative w-full h-screen flex flex-col items-center justify-center">
+    <div
+      className="relative w-full h-screen flex flex-col items-center justify-center"
+      id="landing"
+    >
       {/* Version Info */}
       <InteractiveGridPattern
         className={cn(

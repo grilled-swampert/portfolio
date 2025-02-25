@@ -64,6 +64,16 @@ const Footer = () => {
           <HoverUnderline>LINKEDIN</HoverUnderline>
         </a>
       </div>
+      <a
+        href="#landing"
+        className="fixed bottom-4 right-4 bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300"
+        aria-label="Scroll to top"
+      >
+        <img
+          src="/public/images/up-arrow.png"
+          alt="Scroll to top"
+        />
+      </a>
     </div>
   );
 };
