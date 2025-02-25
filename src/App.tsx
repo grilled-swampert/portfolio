@@ -193,7 +193,7 @@ function App() {
                 d="M567.5,700.5A133,133 0 1 1833.5,700.5A133,133 0 1 1567.5,700.5"
               />
             </defs>
-            <text className="uppercase origin-[700px_700px] will-change-transform opacity-100 text-[28vmin]">
+            <text className="uppercase origin-[700px_700px] will-change-transform opacity-100 text-[28vmin] md:text-[30vmin]">
               <textPath
                 ref={(el) => {
                   circleTextRefs.current[0] = el;
@@ -203,7 +203,7 @@ function App() {
                 MARTYRDOM WEATHER &nbsp;
               </textPath>
             </text>
-            <text className="uppercase origin-[700px_700px] text-[17vmin]">
+            <text className="uppercase origin-[700px_700px] text-[17vmin] md:text-[19vmin]">
               <textPath
                 ref={(el) => {
                   circleTextRefs.current[1] = el;
@@ -213,7 +213,7 @@ function App() {
                 WEAPONSIZE THE TIMELINE &nbsp;
               </textPath>
             </text>
-            <text className="uppercase origin-[700px_700px] text-[8.3vmin]">
+            <text className="uppercase origin-[700px_700px] text-[8.3vmin] md:text-[9vmin]">
               <textPath
                 ref={(el) => {
                   circleTextRefs.current[2] = el;
@@ -223,7 +223,7 @@ function App() {
                 BLURRING THROUGH THESE MOTIONS &nbsp;
               </textPath>
             </text>
-            <text className="uppercase origin-[700px_700px] text-[11vmin]">
+            <text className="uppercase origin-[700px_700px] text-[11vmin] md:text-[12vmin]">
               <textPath
                 ref={(el) => {
                   circleTextRefs.current[3] = el;
