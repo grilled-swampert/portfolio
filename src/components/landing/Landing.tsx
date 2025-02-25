@@ -62,7 +62,7 @@ const Landing = () => {
       {/* Who Am I Section */}
       <div className="mt-8 text-center max-w-xl px-4">
         <p className="text-lg">
-          I'm a digital alchemist turning coffee into energy and music into
+          I'm a digital alchemist turning coffee into energy and using music as
           coping mechanism. I thrive on creative chaos and unconventional
           solutions.
         </p>
