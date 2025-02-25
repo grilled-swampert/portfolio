@@ -1,5 +1,4 @@
 import Footer from "./components/footer/Footer";
-import Hackathons from "./components/hackathons/Hackathons";
 import Landing from "./components/landing/Landing";
 import BentoProjectGrid from "./components/projects/BentoProjectGrid";
 import StackingCards from "./components/experience/stackingCards";
