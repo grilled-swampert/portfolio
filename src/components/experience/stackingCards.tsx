@@ -20,15 +20,19 @@ const Card = ({
   return (
     <li
       className="card sticky top-0 h-[70vh] shadow-2xl"
-      style={{ "--index": index }}
+      style={{ "--index": `${index}` } as React.CSSProperties}
     >
       <div
         className="shadow-lg drop-shadow-xl h-full text-gray-900 rounded-2xl overflow-hidden grid grid-cols-2 p-6 transform transition-transform duration-500"
         style={{ backgroundColor: bgColor }}
       >
-        <div className="space-y-4 text-left">
+        <div className="width-full flex flex-row col-span-2 justify-between align-middle">
           <h2 className="text-4xl font-serif font-bold">{title}</h2>
-          <p className="text-lg">{content}</p>
+          <h2 className="text-right">{time}</h2>
+        </div>
+        <div>
+          {content}
+          {place}
         </div>
         <figure>
           <img
