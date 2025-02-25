@@ -101,7 +101,7 @@ const StackingCards = () => {
     },
   ];
 
-  const cardColors = ["#52796F", "#CBC5EA", "#9381FF"];
+  const cardColors = ["#52796F", "#A1E44D", "#52796F"];
 
   return (
     <div className="text-beige text-center pb-40" id="hell">

@@ -163,7 +163,7 @@ const BentoProjectGrid = () => {
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="p-10 md:h-[400px] rounded-xl shadow-lg mb-4"
+                    className="p-10 md:h-[300px] lg:h-[400px] rounded-xl shadow-lg mb-4"
                   />
                 </Lens>
                 <div className="w-[30vw] ml-5 flex justify-center flex-col items-center">
