@@ -1,8 +1,20 @@
 import { VelocityScroll } from "../ui/scroll-based-velocity";
 
+import { ReactNode } from "react";
+
+const HoverUnderline = ({ children, className = "", ...rest }: { children: ReactNode, className?: string }) => (
+  <div className={`relative inline-block group ${className}`} {...rest}>
+    {children}
+    <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+  </div>
+);
+
 const Footer = () => {
   return (
-    <div className="bg-black w-full h-[100vh] flex flex-col items-center justify-center" id="footer">
+    <div
+      className="bg-black w-full h-[100vh] flex flex-col items-center justify-center"
+      id="footer"
+    >
       <div className="h-[400px] w-full flex items-center justify-center overflow-hidden">
         <VelocityScroll
           className="text-white text-[12rem] top-[0rem] z-0"
@@ -17,10 +29,37 @@ const Footer = () => {
         className="w-full flex flex-col gap-8 overflow-hidden text-center md:text-left text-3xl text-white"
         style={{ fontFamily: "quattrocento-regular" }}
       >
-        <div className="md:mx-40">LINKEDLN</div>
-        <div className="md:mx-40">GITHUB</div>
-        <div className="md:mx-40">RESUME</div>
-        <div className="md:mx-40">COVER LETTER</div>
+        <a
+          href="https://drive.google.com/file/d/1qDlNYUZemlJ14xzvsMV6o50owCtv2umL/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="md:mx-40"
+        >
+          <HoverUnderline>RESUME</HoverUnderline>
+        </a>
+        <a
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+          className="md:mx-40"
+        >
+          <HoverUnderline>COVER LETTER</HoverUnderline>
+        </a>        <a
+          href="https://github.com/grilled-swampert"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="md:mx-40 mt-2"
+        >
+          <HoverUnderline>GITHUB</HoverUnderline>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/swapnil-ranadive-65b260342/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="md:mx-40 mt-2"
+        >
+          <HoverUnderline>LINKEDIN</HoverUnderline>
+        </a>
       </div>
     </div>
   );

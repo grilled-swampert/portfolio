@@ -212,7 +212,7 @@ const BentoProjectGrid = () => {
             More in Development.
           </h1>
           <p
-            className="md:text-1xl w-1/2 mx-auto my-8"
+            className="md:text-1xl"
             style={{ fontFamily: "poppins-regular" }}
           >
             We build our own prisons. Bars forged of oaths, codes, commitments.

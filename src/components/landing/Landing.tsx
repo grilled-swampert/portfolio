@@ -1,10 +1,6 @@
 import { LineShadowText } from "../ui/line-shadow-text";
 import { InteractiveGridPattern } from "../ui/interactive-grid-pattern";
-import {
-  AnimatedSpan,
-  Terminal,
-  TypingAnimation,
-} from "../ui/terminal";
+import { AnimatedSpan, Terminal, TypingAnimation } from "../ui/terminal";
 
 const Landing = () => {
   function cn(...classes: string[]): string {
@@ -26,7 +22,9 @@ const Landing = () => {
       >
         <p className="ml-2">Version 1.1</p>
         <Terminal className="hidden md:block">
-          <TypingAnimation className="text-white">&gt; version 1.2 patches</TypingAnimation>
+          <TypingAnimation className="text-white">
+            &gt; version 1.2 patches
+          </TypingAnimation>
 
           <AnimatedSpan delay={1500} className="text-white">
             <span>✘ Github & Deployment Links.</span>
@@ -40,11 +38,11 @@ const Landing = () => {
             <span>✘ Fixing bugs in transition animations.</span>
           </AnimatedSpan>
 
-          <TypingAnimation delay={6500} className="text-amber-200">
-            Project patches note updated.
-          </TypingAnimation>
+          <AnimatedSpan delay={4000} className="text-white">
+            <span>✘ Cover Letter.</span>
+          </AnimatedSpan>
 
-          <TypingAnimation delay={7000} className="text-white">
+          <TypingAnimation delay={5000} className="text-lime-500">
             Will be added soon.
           </TypingAnimation>
         </Terminal>
@@ -65,15 +63,19 @@ const Landing = () => {
       <div className="mt-8 text-center max-w-xl px-4">
         <p className="text-lg">
           I'm a digital alchemist turning coffee into energy and music into
-          coping mechanism. I thrive on creative chaos and unconventional solutions.
+          coping mechanism. I thrive on creative chaos and unconventional
+          solutions.
         </p>
         <button
           className="bg-black font-bold p-0 rounded-[5px] mt-5"
           style={{ fontFamily: "poppins-regular" }}
         >
-          <span className="block bg-black text-white py-6 px-8 border border-black rounded-[5px] transform -translate-x-1 -translate-y-1 transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.2,1)] hover:-translate-x-2 hover:-translate-y-2">
+          <a
+            href="mailto:s.ranadive@somaiya.edu"
+            className="block bg-black text-white py-6 px-8 border border-black rounded-[5px] transform -translate-x-1 -translate-y-1 transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.2,1)] hover:-translate-x-2 hover:-translate-y-2"
+          >
             Contact Me
-          </span>
+          </a>
         </button>
       </div>
 
@@ -84,28 +86,31 @@ const Landing = () => {
         <div className="flex flex-col">
           {" "}
           <a
-            href="https://link1.com"
+            href="https://drive.google.com/file/d/1qDlNYUZemlJ14xzvsMV6o50owCtv2umL/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative inline-block text-black group"
           >
             RESUME
             <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a
-            href="https://link2.com"
-            className="relative inline-block text-black group mt-2"
-          >
+          <p className="relative inline-block text-black group mt-2">
             COVER LETTER
             <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
-          </a>
+          </p>
           <a
-            href="https://link3.com"
+            href="https://github.com/grilled-swampert"
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative inline-block text-black group mt-2"
           >
             GITHUB
             <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a
-            href="https://link4.com"
+            href="https://www.linkedin.com/in/swapnil-ranadive-65b260342/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative inline-block text-black group mt-2"
           >
             LINKEDIN
@@ -114,7 +119,6 @@ const Landing = () => {
         </div>
       </div>
 
-      {/* Scroll Down Arrow */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
         <div className="animate-bounce">
           <svg
