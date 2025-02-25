@@ -1,5 +1,3 @@
-import TimeVideo from "../../assets/timeAnimation.mp4"
-
 const Hackathons = () => {
   return (
     <div className="bg-black w-full h-[100vh] flex flex-col items-center justify-center" id="hackathons">

@@ -1,4 +1,3 @@
-import React from "react";
 import { VelocityScroll } from "../ui/scroll-based-velocity";
 
 const Footer = () => {

@@ -1,4 +1,3 @@
-import BentoProjectGrid from "./BentoProjectGrid";
 
 const Projects = () => {
   return (

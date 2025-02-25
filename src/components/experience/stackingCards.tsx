@@ -2,12 +2,16 @@ import { useEffect } from "react";
 
 const Card = ({
   title,
+  time,
+  place,
   content,
   image,
   index,
   bgColor,
 }: {
   title: string;
+  time: string;
+  place: string;
   content: string;
   image: string;
   index: number;
@@ -40,41 +44,33 @@ const Card = ({
 
 const StackingCards = () => {
   useEffect(() => {
-    const handleScroll = () => {
-      const cards = document.querySelectorAll(".cards");
-      cards.forEach((card, index) => {
-        const rect = (card as HTMLElement).getBoundingClientRect();
-        const center = window.innerHeight / 2;
-        // Only apply additional stacking once the card's top is above the center.
-        const offset =
-          rect.top < center ? Math.min(1, (center - rect.top) / center) : 0;
-        (card as HTMLElement).style.transform = `translateY(${
-          index * 30 + offset * index * 10
-        }px)`;
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    // Call it once on mount to set initial positions
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card, index) => {
+      card.setAttribute("style", `--index: ${index}; top: ${index * 10}vh;`);
+    });
   }, []);
 
   const cards = [
     {
-      title: "Card One",
+      title: "Machine Learning Intern",
+      time: "Jan 2025 - present",
+      place: "KJSSE",
       content:
         "This is the content of card one. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       image: "images/plants.png",
     },
     {
-      title: "Card Two",
+      title: "Full Stack Developer Intern",
+      time: "July 2024 - Jan 2025",
+      place: "KJSSE",
       content:
         "This is the content of card two. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       image: "images/relaxing.png",
     },
     {
-      title: "Card Three",
+      title: "FOSSEE Summer Fellowship",
+      time: "March 2024 - July 2024",
+      place: "KJSSE",
       content:
         "This is the content of card three. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       image: "images/cat-muffs.png",

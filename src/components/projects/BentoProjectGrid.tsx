@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Lens } from "../ui/lens";
-import { FontFamilyIcon } from "@radix-ui/react-icons";
 import { MagicCard } from "../ui/magic-card";
 
 const projects = [
