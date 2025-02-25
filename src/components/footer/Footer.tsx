@@ -70,7 +70,7 @@ const Footer = () => {
         aria-label="Scroll to top"
       >
         <img
-          src="/public/images/up-arrow.png"
+          src="/images/up-arrow.png"
           alt="Scroll to top"
         />
       </a>
