@@ -19,7 +19,7 @@ const Card = ({
 }) => {
   return (
     <li
-      className="card sticky top-0 md:h-[50vh] shadow-2xl"
+      className="card sticky top-0 md:h-[60vh] shadow-2xl"
       style={{ "--index": `${index}` } as React.CSSProperties}
     >
       <div
@@ -46,7 +46,7 @@ const Card = ({
         >
           {place}
         </div>
-        <div className="col-span-2 md:col-span-1 text-left font-medium" style={{ fontFamily: "afacad-regular"}}>
+        <div className="col-span-2 md:col-span-1 lg:text-[1.2rem] text-left font-medium" style={{ fontFamily: "afacad-regular"}}>
           {content.split(". ").map((sentence, i) => (
             <p key={i} className="mt-2">
               → {sentence}

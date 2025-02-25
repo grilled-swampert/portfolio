@@ -203,8 +203,8 @@ const BentoProjectGrid = () => {
         </div>
       </div>
 
-      <section className="h-full">
-        <div className="container p-20 text-center text-white">
+      <section className="h-full flex justify-center">
+        <div className="container w-full p-20 text-center text-white">
           <h1
             className="text-4xl md:text-6xl font-light mb-4"
             style={{ fontFamily: "afacad-bold" }}
