@@ -4,6 +4,7 @@ import BentoProjectGrid from "./components/projects/BentoProjectGrid";
 import StackingCards from "./components/experience/stackingCards";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -165,6 +166,7 @@ function App() {
 
   return (
     <>
+    <Analytics/>
       {!isLoaded ? (
         <>
           <svg
