@@ -80,7 +80,7 @@ const StackingCards = () => {
       time: "May 2025 - present",
       place: "CitiusCloud LLP",
       content:
-        "",
+        "To be updated.",
       image: "images/cold-chilly.png",
     },
     {

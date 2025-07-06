@@ -140,7 +140,7 @@ const BentoProjectGrid = () => {
   return (
     <main className="w-full h-full bg-black">
       <p
-        className="text-6xl font-bold text-white mb-7 pt-[10rem] flex justify-center"
+        className="text-6xl font-bold text-amber-300 mb-7 pt-[10rem] flex justify-center"
         style={{ fontFamily: "afacad-bold" }}
       >
         PROJECTS
@@ -209,16 +209,16 @@ const BentoProjectGrid = () => {
             className="text-4xl md:text-6xl font-light mb-4"
             style={{ fontFamily: "afacad-bold" }}
           >
-            More in Development.
+            Section under renovation.
           </h1>
-          <p
+          {/* <p
             className="md:text-1xl"
             style={{ fontFamily: "poppins-regular" }}
           >
             We build our own prisons. Bars forged of oaths, codes, commitments.
             Walls of self-doubt and accepted limitation. We inhabit these cells,
             these identities, and call them "us."
-          </p>
+          </p> */}
         </div>
       </section>
     </main>
