@@ -23,30 +23,26 @@ const Landing = () => {
         className="absolute top-0 left-0 m-4 "
         style={{ fontFamily: "afacad-regular" }}
       >
-        <p className="ml-2">Version 1.1</p>
+        <p className="ml-2">Version 1.0.2</p>
         <Terminal className="hidden md:block">
           <TypingAnimation className="text-white">
-            &gt; version 1.2 patches
+            &gt; version 1.0.3 patches
           </TypingAnimation>
 
           <AnimatedSpan delay={1500} className="text-white">
-            <span>✘ Github & Deployment Links.</span>
+            <span>✘ Project Section under renovation.</span>
           </AnimatedSpan>
 
           <AnimatedSpan delay={2000} className="text-white">
-            <span>✘ Hackathon Section.</span>
-          </AnimatedSpan>
-
-          <AnimatedSpan delay={3000} className="text-white">
-            <span>✘ Fixing bugs in transition animations.</span>
+            <span>✘ Hackathon Section under development.</span>
           </AnimatedSpan>
 
           <AnimatedSpan delay={4000} className="text-white">
-            <span>✘ Cover Letter.</span>
+            <span>✘ Cover Letter being cooked.</span>
           </AnimatedSpan>
 
           <TypingAnimation delay={5000} className="text-lime-500">
-            Will be added soon.
+            The next update isn't that far.
           </TypingAnimation>
         </Terminal>
       </div>
@@ -65,9 +61,7 @@ const Landing = () => {
       {/* Who Am I Section */}
       <div className="mt-8 text-center max-w-xl px-4">
         <p className="text-lg">
-          I'm a digital alchemist turning coffee into energy and using music as
-          coping mechanism. I thrive on creative chaos and unconventional
-          solutions.
+          meow.
         </p>
         <button
           className="bg-black font-bold p-0 rounded-[5px] mt-5"

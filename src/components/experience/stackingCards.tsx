@@ -76,6 +76,14 @@ const StackingCards = () => {
 
   const cards = [
     {
+      title: "DevOps Intern",
+      time: "May 2025 - present",
+      place: "CitiusCloud LLP",
+      content:
+        "",
+      image: "images/cold-chilly.png",
+    },
+    {
       title: "Machine Learning Intern",
       time: "Jan 2025 - present",
       place: "KJSSE",
@@ -101,7 +109,7 @@ const StackingCards = () => {
     },
   ];
 
-  const cardColors = ["#52796F", "#A1E44D", "#52796F"];
+  const cardColors = ["#52796F", "#A1E44D", "#52796F", "#A1E44D"];
 
   return (
     <div className="text-beige text-center pb-40" id="hell">
